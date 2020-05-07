@@ -1,0 +1,199 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: gray;
+  position: fixed;
+  margin-top: -5px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vw;
+}
+
+.header h1 {
+  color: black;
+  margin: 0 8vw;
+}
+
+.header .title {
+  color: black;
+  font-size: 3vw;
+  margin: 0 3vw;
+}
+
+.header ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 5vw;
+}
+
+.header ul li {
+  background-color: greenyellow;
+  padding: 10px 20px;
+  margin: 10px;
+  text-align: left;
+}
+
+.background img {
+  width: 100vw;
+}
+
+.background .how {
+  height: 100vh;
+  width: 100vw;
+}
+
+.background .how h1 {
+  margin: 30vh 30vw;
+}
+
+.wrap {
+  display: inline-block;
+  width: max-content;
+  background-color: #fff;
+  margin: 0 15vw;
+}
+
+.wrap .plan_create {
+  margin-top: 20vh;
+  padding-top: 2vw;
+  background-color: lightblue;
+  width: 70vw;
+  height: 180vh;
+}
+
+.wrap .plan_create .title {
+  padding: 3vh 5vw;
+  background-color: pink;
+  margin: 5vw;
+  width: 20vw;
+}
+
+.wrap .plan_create .contents {
+  padding: 2vw;
+  margin: 5vw;
+  background-color: pink;
+}
+
+.wrap .plan_create .contents .plan_content {
+  width: 55vw;
+  height: 30vh;
+  background-color: lightgray;
+  font-size: 20px;
+}
+
+.wrap .plan_create .cost {
+  padding: 2vh 2vw;
+  background-color: gray;
+  margin: 5vw;
+  width: 30vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrap .plan_create .cost p {
+  margin-right: 5vw;
+}
+
+.wrap .plan_create .cost input {
+  height: 4vh;
+}
+
+.wrap .plan_create .memory {
+  padding: 3vh 5vw;
+  background-color: pink;
+  margin: 5vw;
+}
+
+.wrap .plan_create .memory .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrap .plan_create .memory .content input {
+  width: 30vw;
+  height: 10vw;
+}
+
+.wrap .plan_create .memory .content img {
+  width: 15vw;
+  height: 15vw;
+}
+
+.wrap .plan_create .end {
+  padding: 3vh 1vw 3vh 5vw;
+  background-color: lightblue;
+  margin: 5vw;
+  margin-right: 2vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrap .plan_create .end .close {
+  font-size: 5vw;
+  background-color: lightblue;
+  margin-left: 22vw;
+}
+
+.wrap .plan_create .end .create {
+  padding: 1vh 3vw;
+  font-size: 2vw;
+  background-color: greenyellow;
+}
+
+.wrap .plan {
+  margin-top: 20vh;
+  background-color: gray;
+  width: 70vw;
+  height: 40vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.wrap .plan .image {
+  padding: 2vw;
+}
+
+.wrap .plan .image img {
+  width: 20vw;
+  height: 20vw;
+}
+
+.wrap .plan .content h2 {
+  margin: 0;
+}
+
+.wrap .plan .content p {
+  margin: 0;
+}
+
+.wrap .plan .content input {
+  width: 40vw;
+  height: 10vw;
+}

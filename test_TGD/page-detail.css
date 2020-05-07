@@ -1,0 +1,194 @@
+body { 
+    color: #333333;
+}
+header{
+  z-index: 100;
+}
+.wrap{
+    display: flex;
+    width: max-content;
+    background-color: #fff;
+    margin: 0 15vw;
+    
+}
+.wrap .page-detail{
+    margin-top: 20vh;
+    background-color: lightblue;
+    width: 70vw;
+    height: 1000vh;
+}
+.wrap .page-detail .title {
+    padding: 3vh 5vw;
+    background-color: pink;
+    margin: 5vw;
+    width: 20vw;
+  }
+.wrap .page-detail .date {
+    padding: 3vh 5vw;
+    background-color: pink;
+    margin: 5vw;
+    width: 20vw;
+  }
+.wrap .page-detail .place {
+    padding: 3vh 5vw;
+    background-color: pink;
+    margin: 5vw;
+    width: 20vw;
+  }
+.wrap .page-detail .detail {
+    padding: 3vh 5vw;
+    background-color: pink;
+    margin: 5vw;
+    width: 50vw;
+    height: 30vw;
+  }
+.wrap .page-detail .price {
+    padding: 3vh 5vw;
+    background-color: pink;
+    margin: 5vw;
+    width: 50vw;
+  }
+.wrap .page-detail .album {
+    padding: 3vh 5vw;
+    background-color: pink;
+    margin: 5vw;
+    width: 50vw;
+    height: 10vw;
+    position: relative;
+  }
+.wrap .page-detail .album .img1{
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+}
+
+.wrap .page-detail .bottom{
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+  padding-left: 40%; 
+} 
+
+.wrap .page-detail .bottom .button{
+  font-size: 50px;
+  background-color: lightblue;
+  padding: 20px;
+}
+.wrap .page-detail .bottom .edit{
+  font-size: 50px;
+  background-color: lightblue;
+}
+.wrap .page-detail .modal{
+    display: none;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 200;
+}
+.wrap .page-detail .modal__content{
+  background: #FFDAB9;
+  left: 35%;
+  padding: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 60vw;
+  height: 80%;
+  overflow-y:scroll;
+  display: flex;
+  flex-direction: column;
+}
+.wrap .page-detail .modal .bottom{
+  background: rgb(22, 21, 20);
+  justify-content: center;
+  display:block;
+  float: right;
+} 
+.wrap .page-detail .modal .button{
+  background: transparent;
+  font-size: 20px;
+  float: right;
+}
+.wrap .page-detail .modal__content .subtitle{
+  padding: 0vh 0vw;
+  background-color: pink;
+  width: 25vw;
+  float:left;
+  margin: 1vh 1vh;
+}
+.wrap .page-detail .modal__content .date{
+  padding: 0vh 0vw;
+  background-color: pink;
+  margin: 1vh 1vh;
+  width: 25vw;
+}
+.wrap .page-detail .modal__content .place{
+  padding: 0vh 0vw;
+  background-color: pink;
+  margin: 1vh 1vh;
+  width: 25vw;
+}
+.wrap .page-detail .modal__content .content{
+  padding: 8vh 0vw;
+  background-color: pink;
+  width: 56vw;
+  margin: 1vh 1vh;
+  clear: both;
+}
+.wrap .page-detail .modal__content .price{
+  padding: 0vh 0vw;
+  background-color: pink;
+  margin: 1vh 1vw;
+  width: 25vw;
+}
+.wrap .page-detail .popup-overlay{
+  /*Hides pop-up when there is no "active" class*/
+  visibility:hidden;
+  position:absolute;
+  background:#ffffff;
+  top: 0%;
+  left:20%;
+  }
+  
+.wrap .page-detail .popup-overlay.active{
+/*displays pop-up when "active" class is present*/
+visibility:visible;
+text-align:center;
+background-color: transparent;
+left: 4vw;
+position: fixed;
+z-index: 9999;
+}
+
+.wrap .page-detail .popup-content {
+/*Hides pop-up content when there is no "active" class */
+visibility:hidden;
+position: fixed;
+
+}
+
+.wrap .page-detail .popup-content.active {
+/*Shows pop-up content when "active" class is present */
+visibility:visible;
+}
+
+.wrap .page-detail .open{
+  background-color: transparent;
+}
+.wrap .modal .photo .close{
+  font-size: 20px;
+  background-color: transparent;
+  padding: 20px;
+  position: absolute;
+  right: 1vw;
+}
+.wrap .page-detail .album-images{
+  background-color:#FFDAB9;
+  width: 56vw;
+  height: 35vh;
+  position: static;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}

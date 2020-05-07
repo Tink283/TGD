@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="Personal, Portfolio, Creative,Design,mordan"
+    />
+    <meta name="description" content="Taso" />
+    <meta name="author" content="cosmos-themes" />
+
+    <title>TGD開発</title>
+
+    <!-- favicon -->
+    <link href="#" rel="icon" type="image/png" />
+
+    <!--Font Awesome css-->
+    <link rel="stylesheet" href="assets template/css/fontawesome-all.css" />
+
+    <!--Bootstrap css-->
+    <link
+      rel="stylesheet"
+      href="assets template/bootstrap-4.3.1-dist/css/bootstrap.css"
+    />
+
+    <!--Owl Carousel css-->
+    <link rel="stylesheet" href="assets template/css/owl.carousel.min.css" />
+    <link
+      rel="stylesheet"
+      href="assets template/css/owl.theme.default.min.css"
+    />
+
+    <!--Magnific Popup css-->
+    <link rel="stylesheet" href="assets template/css/magnific-popup.css" />
+    <link rel="stylesheet" href="assets template/css/animate.min.css" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700,800,900%7cOpen+Sans:400,600,700,800"
+      rel="stylesheet"
+    />
+
+    <!--Site Main Style css-->
+    <link rel="stylesheet" href="assets template/css/style.css" />
+    <!--Add FontAwesome-->
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="toppage.css">
+    <link rel="stylesheet" href="page-detail.css">
+    <link rel="stylesheet" href="toppage.scss">
+  </head>
+  <body>
+      <header class="header">
+          <a href="" class="title">TGD</a>
+          <nav class="navbar navbar-expand-sm navbar-light">
+            <div id="menu" class="collapse navbar-collapse">
+              <ul class="navbar-nav">
+                <li class="navbar-item">
+                  <a href="" class="nav-link">ログイン</a>
+                </li>
+                <li class="navbar-item">
+                  <a href="" class="nav-link">新規登録</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+      </header>
+  <div class="wrap">
+    <div class="page-detail">
+      <div class="title">
+        <p>タイトル</p>
+      </div>
+      <div class="date">
+        <p>日付</p>
+      </div>
+      <div class="place">
+        <p>場所</p>
+      </div>
+      <div class="detail">
+        <p>プラン詳細</p>
+      </div>
+      <div class="price">
+        <p>費用</p>
+      </div>
+      <div class="content">
+        <a class="js-modal-open" href="">
+          <div class="album">
+            <p>思い出</p>
+            <div class="img1"><img src="one-peace1.jpg" alt="" width="150px"></div>
+          </div>
+        </a>
+      </div>
+      <div class="modal js-modal">
+        <div class="modal__bg js-modal-close"></div>
+        <div class="modal__content">
+          <div class="modal_header">
+          <div class="subtitle">
+            <p>サブタイトル</p>
+          </div>
+          <a class="js-modal-close" href="">
+              <button class="button"><i class="far fa-times-circle"></i></button>
+          </a>
+          </div>
+          <div class="date">
+            <p>日付</p>
+          </div>
+          <div class="place">
+            <p>場所</p>
+          </div>
+          <div class="content">
+            <p>文章</p>
+          </div>
+          <div class="price">
+            <p>費用</p>
+          </div>
+          <div class="photo">
+            <div class="popup-overlay">
+              <div class="popup-content">
+                <img src="one-peace1.jpg" width="600vw" height="400vh" >
+                <button class="close"><i class="far fa-times-circle"></i></button>
+              </div>
+            </div>
+            <div class="album-images">
+              <button class="open">
+                  <img src="one-peace1.jpg" width="120px"  height="90px">
+              </button>
+              <button class="open">
+                <img src="one-peace1.jpg" width="120px"  height="90px">
+              </button>
+              <button class="open">
+                <img src="one-peace1.jpg" width="120px"  height="90px">
+              </button>
+              <button class="open">
+                <img src="one-peace1.jpg" width="120px"  height="90px">
+              </button>
+              <button class="open">
+                <img src="one-peace1.jpg" width="120px"  height="90px">
+              </button>
+              <button class="open">
+                <img src="one-peace1.jpg" width="120px"  height="90px">
+              </button>
+              <button class="open">
+                <img src="one-peace1.jpg" width="120px"  height="90px">
+              </button>
+              <button class="open">
+                <img src="one-peace1.jpg" width="120px"  height="90px">
+              </button>
+              <button class="open">
+                <img src="one-peace1.jpg" width="120px"  height="90px">
+              </button>
+              <button class="open">
+                <img src="one-peace1.jpg" width="120px"  height="90px">
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <button class="button"><i class="far fa-times-circle"></i></button>
+        <button class="edit">編集</button>
+      </div>
+    </div>  
+  </div>
+        <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
+        <script>$(function(){
+          $('.js-modal-open').on('click',function(){
+              $('.js-modal').fadeIn();
+              return false;
+          });
+          $('.js-modal-close').on('click',function(){
+              $('.js-modal').fadeOut();
+              return false;
+          });
+        });
+        //pop up//
+        $(".open").on("click", function(){
+          $(".popup-overlay, .popup-content").addClass("active");
+        });
+//removes the "active" class to .popup and .popup-content when the "Close" button is clicked 
+        $(".close, .popup-overlay").on("click", function(){
+          $(".popup-overlay, .popup-content").removeClass("active");
+        });</script>
+</body>
+</html>
