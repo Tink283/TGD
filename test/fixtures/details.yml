@@ -1,0 +1,35 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  plan_id: 1
+  date: 2020-05-07
+  spot: MyString
+  image1: MyString
+  image2: MyString
+  image3: MyString
+  image4: MyString
+  image5: MyString
+  image6: MyString
+  image7: MyString
+  image8: MyString
+  image9: MyString
+  image10: MyString
+  text: MyString
+  price: 1
+
+two:
+  plan_id: 1
+  date: 2020-05-07
+  spot: MyString
+  image1: MyString
+  image2: MyString
+  image3: MyString
+  image4: MyString
+  image5: MyString
+  image6: MyString
+  image7: MyString
+  image8: MyString
+  image9: MyString
+  image10: MyString
+  text: MyString
+  price: 1

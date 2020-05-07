@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Usr:</strong>
+  <%= @plan.usr_id %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @plan.title %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @plan.date %>
+</p>
+
+<p>
+  <strong>Spot:</strong>
+  <%= @plan.spot %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @plan.price %>
+</p>
+
+<%= link_to 'Edit', edit_plan_path(@plan) %> |
+<%= link_to 'Back', plans_path %>
