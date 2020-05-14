@@ -1,34 +1,102 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="Personal, Portfolio, Creative,Design"
+    />
+    
+    <meta name="author" content="cosmos-themes" />
 
-<h1>Plans</h1>
+    <title>TGD開発</title>
 
-<table>
-  <thead>
-    <tr>
-      <th>User</th>
-      <th>Title</th>
-      <th>Date</th>
-      <th>Spot</th>
-      <th>Price</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <!-- favicon -->
+    <link href="#" rel="icon" type="image/png" />
 
-  <tbody>
-    <% @plans.each do |plan| %>
-      <tr>
-        <td><%= plan.usr_id %></td>
-        <td><%= plan.title %></td>
-        <td><%= plan.date %></td>
-        <td><%= plan.spot %></td>
-        <td><%= plan.price %></td>
-        <td><%= link_to 'Show', plan %></td>
-        <td><%= link_to 'Edit', edit_plan_path(plan) %></td>
-        <td><%= link_to 'Destroy', plan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <!--Font Awesome css-->
+    <link rel="stylesheet" href="assets template/css/fontawesome-all.css" />
+
+    <!--Bootstrap css-->
+    <link
+      rel="stylesheet"
+      href="assets template/bootstrap-4.3.1-dist/css/bootstrap.css"
+    />
+
+    <!--Owl Carousel css-->
+    <link rel="stylesheet" href="assets template/css/owl.carousel.min.css" />
+    <link
+      rel="stylesheet"
+      href="assets template/css/owl.theme.default.min.css"
+    />
+
+    <!--Magnific Popup css-->
+    <link rel="stylesheet" href="assets template/css/magnific-popup.css" />
+    <link rel="stylesheet" href="assets template/css/animate.min.css" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700,800,900%7cOpen+Sans:400,600,700,800"
+      rel="stylesheet"
+    />
+
+    <!--Add FontAwesome-->
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+  </head>
+  <body>
+  <% @plans.each do |plan| %>
+      <header class="header">
+          <a href="" class="title">TGD</a>
+          <nav class="navbar navbar-expand-sm navbar-light">
+            <div id="menu" class="collapse navbar-collapse">
+              <ul class="navbar-nav">
+                <li class="navbar-item">
+                  <a href="" class="nav-link">ログイン</a>
+                </li>
+                <li class="navbar-item">
+                  <a href="" class="nav-link">新規登録</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+      </header>
+      <div class="wrap">
+        <div class="plan_create">
+          <div class="title"><h2><%= plan.title %></h2></div>
+          <div class="date"><h3><%= plan.date %></h3></div>
+          <div class="contents">
+            <p>プラン詳細</p>
+            
+          </div>
+          <div><h3><%= plan.spot %></h3></div>
+          <div class="cost">
+            <h3><%= plan.price %></h3>
+          </div>
+          <div class="memory">
+            <h3>思い出</h3>
+            <p>内容</p>
+            <div class="content">
+              <input type="text"> 
+              <%= image_tag 'image.jpg'%>
+            </div>
+          </div>
+          <div class="end">
+            <button class="close"><i class="far fa-times-circle"></i></button>
+            <td><%= link_to 'Show', plan %></td>
+            <td><%= link_to 'Edit', edit_plan_path(plan) %></td>
+            <td><%= link_to 'Destroy', plan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </div>
+        </div>
+      </div>
+  <% end %>
+  </body>
+</html>
 
 <br>
 
