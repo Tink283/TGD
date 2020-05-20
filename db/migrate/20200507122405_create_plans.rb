@@ -6,7 +6,7 @@ class CreatePlans < ActiveRecord::Migration[6.0]
       t.date :date
       t.string :spot
       t.integer :price
-
+      
       t.timestamps
     end
   end
