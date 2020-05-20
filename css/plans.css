@@ -154,11 +154,10 @@ body {
   align-items: center;
 }
 
-.wrap .plan_create .end .plus {
-  font-size: 3vw;
-  font-family: 'Font Awesome 5 Free';
+.wrap .plan_create .end .close {
+  font-size: 5vw;
   background-color: lightblue;
-  margin-left: 10vw;
+  margin-left: 22vw;
 }
 
 .wrap .plan_create .end .create {

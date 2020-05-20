@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 html{
 margin: 0;
 padding: 0;
@@ -72,14 +73,14 @@ body{
     width: 70vw;
     height: 180vh;
     .title{
-      padding: 3vh 5vw;
+      padding: 1vh 5vw;
       background-color: pink;
-      margin: 5vw;
+      margin: 3vh 5vw;
       width: 20vw;
     }
     .contents{
       padding: 2vw;
-      margin: 5vw;
+      margin: 1.5vh 5vw;
       background-color: pink;
       .plan_content{
         width: 55vw;
@@ -89,9 +90,9 @@ body{
       }
     }
     .cost{
-      padding: 2vh 2vw;
+      padding: 1.5vh 2vw;
       background-color: gray;
-      margin: 5vw;
+      margin: 3vh 5vw;
       width: 30vw;
       display: flex;
       justify-content: space-between;
@@ -106,7 +107,7 @@ body{
     .memory{
       padding: 3vh 5vw;
       background-color: pink;
-      margin: 5vw;
+      margin: 3vh 5vw;
       .content{
         display: flex;
         justify-content: space-between;
@@ -129,10 +130,11 @@ body{
       display: flex;
       justify-content: space-between;
       align-items: center;
-      .close{
-        font-size: 5vw;
+      .plus{
+        font-size: 3vw;
+        font-family: 'Font Awesome 5 Free';
         background-color: lightblue;
-        margin-left: 22vw;
+        margin-left: 10vw;
       }
       .create{
         padding: 1vh 3vw;

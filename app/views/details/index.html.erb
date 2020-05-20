@@ -1,55 +1,113 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="Personal, Portfolio, Creative,Design"
+    />
+    
+    <meta name="author" content="cosmos-themes" />
 
-<h1>Details</h1>
+    <title>TGD開発</title>
 
-<table>
-  <thead>
-    <tr>
-      <th>Plan</th>
-      <th>Date</th>
-      <th>Spot</th>
-      <th>Image1</th>
-      <th>Image2</th>
-      <th>Image3</th>
-      <th>Image4</th>
-      <th>Image5</th>
-      <th>Image6</th>
-      <th>Image7</th>
-      <th>Image8</th>
-      <th>Image9</th>
-      <th>Image10</th>
-      <th>Text</th>
-      <th>Price</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <!-- favicon -->
+    <link href="#" rel="icon" type="image/png" />
 
-  <tbody>
-    <% @details.each do |detail| %>
-      <tr>
-        <td><%= detail.plan_id %></td>
-        <td><%= detail.date %></td>
-        <td><%= detail.spot %></td>
-        <td><%= detail.image1 %></td>
-        <td><%= detail.image2 %></td>
-        <td><%= detail.image3 %></td>
-        <td><%= detail.image4 %></td>
-        <td><%= detail.image5 %></td>
-        <td><%= detail.image6 %></td>
-        <td><%= detail.image7 %></td>
-        <td><%= detail.image8 %></td>
-        <td><%= detail.image9 %></td>
-        <td><%= detail.image10 %></td>
-        <td><%= detail.text %></td>
-        <td><%= detail.price %></td>
-        <td><%= link_to 'Show', detail %></td>
-        <td><%= link_to 'Edit', edit_detail_path(detail) %></td>
-        <td><%= link_to 'Destroy', detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <!--Font Awesome css-->
+    <link rel="stylesheet" href="assets template/css/fontawesome-all.css" />
 
-<br>
+    <!--Bootstrap css-->
+    <link
+      rel="stylesheet"
+      href="assets template/bootstrap-4.3.1-dist/css/bootstrap.css"
+    />
+
+    <!--Owl Carousel css-->
+    <link rel="stylesheet" href="assets template/css/owl.carousel.min.css" />
+    <link
+      rel="stylesheet"
+      href="assets template/css/owl.theme.default.min.css"
+    />
+
+    <!--Magnific Popup css-->
+    <link rel="stylesheet" href="assets template/css/magnific-popup.css" />
+    <link rel="stylesheet" href="assets template/css/animate.min.css" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700,800,900%7cOpen+Sans:400,600,700,800"
+      rel="stylesheet"
+    />
+
+    <!--Add FontAwesome-->
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+  </head>
+  <body>
+  <% @details.each do |detail| %>
+      <header class="header">
+          <a href="" class="title">TGD</a>
+          <nav class="navbar navbar-expand-sm navbar-light">
+            <div id="menu" class="collapse navbar-collapse">
+              <ul class="navbar-nav">
+                <li class="navbar-item">
+                  <%= link_to 'プラン作成', new_plan_path %>
+                </li>
+                <li class="navbar-item">
+                  <%= link_to 'マイページ', plans_path %>
+                </li>
+                <li class="navbar-item">
+                  <a href="" class="nav-link">ログアウト</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+      </header>
+      <div class="wrap">
+        <div class="plan_create">
+          <div class="title"><h2><%= detail.plan_id %></h2></div>
+          <div class="title"><h3><%= detail.date %></h3></div>
+          <div class="title"><h3><%= detail.spot %></h3></div>
+          <div class="contents">
+            <p>プラン詳細</p>
+            <h3><%= detail.text %></h3>
+          </div>
+          <div class="cost">
+            <h3><%= detail.price %></h3>
+          </div>
+          <div class="album">
+            <td><%= detail.image1 %></td>
+            <td><%= detail.image2 %></td>
+            <td><%= detail.image3 %></td>
+            <td><%= detail.image4 %></td>
+            <td><%= detail.image5 %></td>
+            <td><%= detail.image6 %></td>
+            <td><%= detail.image7 %></td>
+            <td><%= detail.image8 %></td>
+            <td><%= detail.image9 %></td>
+            <td><%= detail.image10 %></td>
+          </div>
+          <div class="end">
+            <%= link_to '/details/new' do %>
+              <i class="fas fa-plus-circle plus"></i>
+            <%end%>
+            <%= link_to edit_detail_path(detail) do%>
+              <i class="fas fa-edit plus"></i>
+            <%end%>
+            <%= link_to detail, method: :delete, data: {confirm: '本当に削除しますか？' } do%>
+              <i class="fas fa-trash-alt plus"></i>
+            <%end%>
+          </div>
+        </div>
+      </div>
+  <% end %>
+  </body>
+</html>
 
 <%= link_to 'New Detail', new_detail_path %>

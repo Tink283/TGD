@@ -1,29 +1,109 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="Personal, Portfolio, Creative,Design"
+    />
+    
+    <meta name="author" content="cosmos-themes" />
 
-<p>
-  <strong>User:</strong>
-  <%= @plan.usr_id %>
-</p>
+    <title>TGD開発</title>
 
-<p>
-  <strong>Title:</strong>
-  <%= @plan.title %>
-</p>
+    <!-- favicon -->
+    <link href="#" rel="icon" type="image/png" />
 
-<p>
-  <strong>Date:</strong>
-  <%= @plan.date %>
-</p>
+    <!--Font Awesome css-->
+    <link rel="stylesheet" href="assets template/css/fontawesome-all.css" />
 
-<p>
-  <strong>Spot:</strong>
-  <%= @plan.spot %>
-</p>
+    <!--Bootstrap css-->
+    <link
+      rel="stylesheet"
+      href="assets template/bootstrap-4.3.1-dist/css/bootstrap.css"
+    />
 
-<p>
-  <strong>Price:</strong>
-  <%= @plan.price %>
-</p>
+    <!--Owl Carousel css-->
+    <link rel="stylesheet" href="assets template/css/owl.carousel.min.css" />
+    <link
+      rel="stylesheet"
+      href="assets template/css/owl.theme.default.min.css"
+    />
 
-<%= link_to 'Edit', edit_plan_path(@plan) %> |
-<%= link_to 'Back', plans_path %>
+    <!--Magnific Popup css-->
+    <link rel="stylesheet" href="assets template/css/magnific-popup.css" />
+    <link rel="stylesheet" href="assets template/css/animate.min.css" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700,800,900%7cOpen+Sans:400,600,700,800"
+      rel="stylesheet"
+    />
+
+    <!--Add FontAwesome-->
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+  </head>
+  <body>
+  <% @plans.each do |plan| %>
+      <header class="header">
+          <a href="" class="title">TGD</a>
+          <nav class="navbar navbar-expand-sm navbar-light">
+            <div id="menu" class="collapse navbar-collapse">
+              <ul class="navbar-nav">
+                <li class="navbar-item">
+                  <%= link_to 'プラン作成', new_plan_path %>
+                </li>
+                <li class="navbar-item">
+                  <%= link_to 'マイページ', plans_path %>
+                </li>
+                <li class="navbar-item">
+                  <a href="" class="nav-link">ログアウト</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+      </header>
+      <div class="wrap">
+        <div class="plan_create">
+          <div class="title"><h2><%= plan.title %></h2></div>
+          <div class="title"><h3><%= plan.date %></h3></div>
+          <div class="title"><h3><%= plan.spot %></h3></div>
+          <div class="contents">
+            <p>プラン詳細</p>
+            <h3><%= plan.text %></h3>
+          </div>
+          <div class="cost">
+            <h3><%= plan.price %></h3>
+          </div>
+          <%= link_to '/details' do %>
+            <div class="memory">
+              <h3>思い出</h3>
+              <p>内容</p>
+              <div class="content">
+                <h3><%= plan.text %></h3>
+                <%= image_tag 'image.jpg'%>
+              </div>
+            </div>
+          <%end%>
+          <div class="end">
+            <%= link_to '/details/new' do %>
+              <i class="fas fa-plus-circle plus"></i>
+            <%end%>
+            <%= link_to edit_plan_path(plan) do%>
+              <i class="fas fa-edit plus"></i>
+            <%end%>
+            <%= link_to plan, method: :delete, data: {confirm: '本当に削除しますか？' } do%>
+              <i class="fas fa-trash-alt plus"></i>
+            <%end%>
+          </div>
+        </div>
+      </div>
+  <% end %>
+  </body>
+</html>

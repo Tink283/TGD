@@ -43,7 +43,7 @@
 
     <!--Add FontAwesome-->
     <link
-      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
       rel="stylesheet"
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -57,47 +57,50 @@
             <div id="menu" class="collapse navbar-collapse">
               <ul class="navbar-nav">
                 <li class="navbar-item">
-                  <a href="" class="nav-link">ログイン</a>
+                  <%= link_to 'プラン作成', new_plan_path %>
                 </li>
                 <li class="navbar-item">
-                  <a href="" class="nav-link">新規登録</a>
+                  <a href="" class="nav-link">ログアウト</a>
                 </li>
               </ul>
             </div>
           </nav>
       </header>
-      <div class="wrap">
-        <div class="plan_create">
-          <div class="title"><h2><%= plan.title %></h2></div>
-          <div class="date"><h3><%= plan.date %></h3></div>
-          <div class="contents">
-            <p>プラン詳細</p>
-            
-          </div>
-          <div><h3><%= plan.spot %></h3></div>
-          <div class="cost">
-            <h3><%= plan.price %></h3>
-          </div>
-          <div class="memory">
-            <h3>思い出</h3>
-            <p>内容</p>
-            <div class="content">
-              <input type="text"> 
-              <%= image_tag 'image.jpg'%>
-            </div>
-          </div>
-          <div class="end">
-            <button class="close"><i class="far fa-times-circle"></i></button>
-            <td><%= link_to 'Show', plan %></td>
-            <td><%= link_to 'Edit', edit_plan_path(plan) %></td>
-            <td><%= link_to 'Destroy', plan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          </div>
+      <div class = "wrap">
+        <div class = "plan_create">
+          <%= link_to plan do %>
+              <div class="memory">
+                <h3>思い出</h3>
+                <p>内容</p>
+                <div class="content">
+                  <h3><%= plan.text %></h3>
+                  <%= image_tag 'image.jpg'%>
+                </div>
+              </div>
+          <%end%>
+          <%= link_to plan do %>
+              <div class="memory">
+                <h3>思い出</h3>
+                <p>内容</p>
+                <div class="content">
+                  <h3><%= plan.text %></h3>
+                  <%= image_tag 'image.jpg'%>
+                </div>
+              </div>
+          <%end%>
+          <%= link_to plan do %>
+              <div class="memory">
+                <h3>思い出</h3>
+                <p>内容</p>
+                <div class="content">
+                  <h3><%= plan.text %></h3>
+                  <%= image_tag 'image.jpg'%>
+                </div>
+              </div>
+          <%end%>
         </div>
       </div>
-  <% end %>
+  <%end%>  
   </body>
 </html>
 
-<br>
-
-<%= link_to 'New Plan', new_plan_path %>

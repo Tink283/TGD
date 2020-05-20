@@ -10,6 +10,7 @@ class PlansController < ApplicationController
   # GET /plans/1
   # GET /plans/1.json
   def show
+    @plans = Plan.all
   end
 
   # GET /plans/new
@@ -27,7 +28,7 @@ class PlansController < ApplicationController
     @plan = Plan.new(plan_params)
 
     respond_to do |format|
-      if @plan.save
+      if @plan.save!
         format.html { redirect_to @plan, notice: 'Plan was successfully created.' }
         format.json { render :show, status: :created, location: @plan }
       else
@@ -69,6 +70,10 @@ class PlansController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def plan_params
-      params.require(:plan).permit(:usr_id, :title, :date, :spot, :price)
+      params.require(:plan).permit(:usr_id, :title, :date, :spot, :price, :text)
+    end
+
+    def preview
+      render template: 'details/index',layout:'new'
     end
 end

@@ -19,6 +19,7 @@ class PlansTest < ApplicationSystemTestCase
     fill_in "Spot", with: @plan.spot
     fill_in "Title", with: @plan.title
     fill_in "User", with: @plan.usr_id
+    fill_in "Text", with: @plan.text
     click_on "Create Plan"
 
     assert_text "Plan was successfully created"
@@ -34,6 +35,7 @@ class PlansTest < ApplicationSystemTestCase
     fill_in "Spot", with: @plan.spot
     fill_in "Title", with: @plan.title
     fill_in "User", with: @plan.usr_id
+    fill_in "Text", with: @plan.text
     click_on "Update Plan"
 
     assert_text "Plan was successfully updated"
