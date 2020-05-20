@@ -71,4 +71,5 @@ class DetailsController < ApplicationController
     def detail_params
       params.require(:detail).permit(:plan_id, :date, :spot, :image1, :image2, :image3, :image4, :image5, :image6, :image7, :image8, :image9, :image10, :text, :price)
     end
+
 end
