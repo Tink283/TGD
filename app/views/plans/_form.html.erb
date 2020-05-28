@@ -1,46 +1,138 @@
-<%= form_with(model: plan, local: true) do |form| %>
-  <% if plan.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(plan.errors.count, "error") %> prohibited this plan from being saved:</h2>
 
-      <ul>
-        <% plan.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+  <!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="Personal, Portfolio, Creative,Design"
+    />
+    
+    <meta name="author" content="cosmos-themes" />
+
+    <title>TGD開発</title>
+
+    <!-- favicon -->
+    <link href="#" rel="icon" type="image/png" />
+
+    <!--Font Awesome css-->
+    <link rel="stylesheet" href="assets template/css/fontawesome-all.css" />
+
+    <!--Bootstrap css-->
+    <link
+      rel="stylesheet"
+      href="assets template/bootstrap-4.3.1-dist/css/bootstrap.css"
+    />
+
+    <!--Owl Carousel css-->
+    <link rel="stylesheet" href="assets template/css/owl.carousel.min.css" />
+    <link
+      rel="stylesheet"
+      href="assets template/css/owl.theme.default.min.css"
+    />
+
+    <!--Magnific Popup css-->
+    <link rel="stylesheet" href="assets template/css/magnific-popup.css" />
+    <link rel="stylesheet" href="assets template/css/animate.min.css" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700,800,900%7cOpen+Sans:400,600,700,800"
+      rel="stylesheet"
+    />
+
+    <!--Add FontAwesome-->
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+  </head>
+  <body>
+  <%= form_with(model: plan, local: true) do |form| %>
+    <% if plan.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(plan.errors.count, "error") %> prohibited this plan from being saved:</h2>
+
+        <ul>
+          <% plan.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <% @plans.each do |plan| %>
+        <header class="header">
+            <a href="" class="title">TGD</a>
+            <nav class="navbar navbar-expand-sm navbar-light">
+              <div id="menu" class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                  <li class="navbar-item">
+                    <%= link_to 'プラン作成', new_plan_path %>
+                  </li>
+                  <li class="navbar-item">
+                    <%= link_to 'マイページ', plans_path %>
+                  </li>
+                  <li class="navbar-item">
+                    <a href="" class="nav-link">ログアウト</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+        </header>
+        <div class="wrap">
+          <div class="plan_create">
+            <div class="title">
+              <%= form.label :title %>
+              <%= form.text_field :title %>
+            </div>
+            <div class="title">
+              <%= form.label :date %>
+              <%= form.date_select :date %>
+            </div>    
+            <div class="title">
+              <%= form.label :spot %>
+              <%= form.text_field :spot %>
+            </div>
+            <div class="contents">
+              <p>プラン詳細</p>
+              <div class="textarea">
+                <%= form_for(@plan) do |f|%>
+                  <%= form.label :text %>
+                  <%= f.text_area :text , cols: "100" , rows: "20"  %>
+                <%end%>
+              </div>
+            </div>
+            <div class="cost">
+              <div class="field">
+                <%= form.label :price %>
+                <%= form.number_field :price %>
+              </div>
+            </div>
+            
+            <div class="ends">
+              <%= form_for(@plan) do |f|%>
+                <%= f.button :type => "submit"  do %>
+                  <i class="fas fa-plus-circle plus"></i>
+                <%end%>
+              <%end%>
+            </div>
+          </div>
+        </div>
+    <% break %>
+    <% end %>
+    <div class="field">
+      <%= form.label :usr_id %>
+      <%= form.number_field :usr_id %>
+    </div>
+
+    
+
+    <div class="actions">
+      <%= form.submit %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :usr_id %>
-    <%= form.number_field :usr_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= form.label :date %>
-    <%= form.date_select :date %>
-  </div>
-
-  <div class="field">
-    <%= form.label :spot %>
-    <%= form.text_field :spot %>
-  </div>
-
-  <div class="field">
-    <%= form.label :price %>
-    <%= form.number_field :price %>
-  </div>
-  <div class="field">
-    <%= form.label :text %>
-    <%= form.text_field :text %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+    </body>
+</html>

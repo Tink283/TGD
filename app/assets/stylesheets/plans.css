@@ -78,16 +78,21 @@ body {
 
 .wrap .plan_create {
   margin-top: 20vh;
-  padding-top: 2vw;
+  padding: 2vw 0;
   background-color: lightblue;
   width: 70vw;
-  height: 180vh;
+  height: auto !important;
 }
 
 .wrap .plan_create .title {
-  padding: 1vh 5vw;
+  padding: 1vh 5vw 1vh 2vw;
   background-color: pink;
   margin: 3vh 5vw;
+  width: 20vw;
+}
+
+.wrap .plan_create .textarea {
+  height: 50vh;
   width: 20vw;
 }
 
@@ -120,6 +125,26 @@ body {
 
 .wrap .plan_create .cost input {
   height: 4vh;
+}
+
+.wrap .plan_create .album {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5vw;
+  flex-wrap: wrap;
+}
+
+.wrap .plan_create .album img {
+  padding: 1.5vh 0vw;
+  margin: 3vh  1vw;
+  width: 15vw;
+}
+
+.wrap .plan_create .album i {
+  font-size: 3vw;
+  font-family: 'Font Awesome 5 Free';
+  background-color: lightblue;
 }
 
 .wrap .plan_create .memory {
@@ -165,6 +190,26 @@ body {
   padding: 1vh 3vw;
   font-size: 2vw;
   background-color: greenyellow;
+}
+
+.wrap .plan_create .ends {
+  padding: 3vh 1vw 3vh 5vw;
+  background-color: lightblue;
+  margin: 5vw;
+  margin-right: 2vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.wrap .plan_create .ends button {
+  background-color: lightblue !important;
+}
+
+.wrap .plan_create .ends i {
+  font-size: 3vw;
+  font-family: 'Font Awesome 5 Free';
+  background-color: lightblue;
 }
 
 .wrap .plan {

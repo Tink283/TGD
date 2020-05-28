@@ -68,14 +68,18 @@ body{
   margin: 0 15vw;
   .plan_create{
     margin-top: 20vh;
-    padding-top: 2vw;
+    padding: 2vw 0;
     background-color: lightblue;
     width: 70vw;
-    height: 180vh;
+    height: auto !important;
     .title{
-      padding: 1vh 5vw;
+      padding: 1vh 5vw 1vh 2vw;
       background-color: pink;
       margin: 3vh 5vw;
+      width: 20vw;
+    }
+    .textarea{
+      height: 50vh;
       width: 20vw;
     }
     .contents{
@@ -102,6 +106,23 @@ body{
       }
       input{
         height: 4vh;
+      }
+    }
+    .album{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5vw;
+      flex-wrap: wrap;
+      img{
+        padding: 1.5vh 0vw;
+        margin: 3vh  1vw;
+        width: 15vw;
+      }
+      i{
+        font-size: 3vw;
+        font-family: 'Font Awesome 5 Free';
+        background-color: lightblue;
       }
     }
     .memory{
@@ -140,6 +161,23 @@ body{
         padding: 1vh 3vw;
         font-size: 2vw;
         background-color: greenyellow;
+      }
+    }
+    .ends{
+      padding: 3vh 1vw 3vh 5vw;
+      background-color: lightblue;
+      margin: 5vw;
+      margin-right: 2vw;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      button{
+        background-color: lightblue !important;
+      }
+      i{
+        font-size: 3vw;
+        font-family: 'Font Awesome 5 Free';
+        background-color: lightblue;
       }
     }
   }

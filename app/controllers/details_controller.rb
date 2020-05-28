@@ -10,6 +10,7 @@ class DetailsController < ApplicationController
   # GET /details/1
   # GET /details/1.json
   def show
+    @details = Detail.all
   end
 
   # GET /details/new
@@ -69,7 +70,7 @@ class DetailsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def detail_params
-      params.require(:detail).permit(:plan_id, :date, :spot, :image1, :image2, :image3, :image4, :image5, :image6, :image7, :image8, :image9, :image10, :text, :price)
+      params.require(:detail).permit(:plan_id, :date, :spot, :image1, :image2, :image3, :image4, :image5, :image6, :image7, :image8, :image9, :image10, :text, :price,:remove_image1,:remove_image2,:remove_image3,:remove_image4,:remove_image5,:remove_image6,:remove_image7,:remove_image8,:remove_image9,:remove_image10)
     end
 
 end

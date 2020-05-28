@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="ja">
   <head>
@@ -83,16 +82,12 @@
             <h3><%= detail.price %></h3>
           </div>
           <div class="album">
-            <td><%= detail.image1 %></td>
-            <td><%= detail.image2 %></td>
-            <td><%= detail.image3 %></td>
-            <td><%= detail.image4 %></td>
-            <td><%= detail.image5 %></td>
-            <td><%= detail.image6 %></td>
-            <td><%= detail.image7 %></td>
-            <td><%= detail.image8 %></td>
-            <td><%= detail.image9 %></td>
-            <td><%= detail.image10 %></td>
+            <td><%= image_tag detail.image1.to_s%></td>
+            <td><%= image_tag detail.image2.to_s%></td>
+            <td><%= image_tag detail.image3.to_s%></td>
+            <%= link_to detail do%>
+              <i class="fas fa-search-plus"></i>
+            <%end%>
           </div>
           <div class="end">
             <%= link_to '/details/new' do %>
@@ -101,7 +96,7 @@
             <%= link_to edit_detail_path(detail) do%>
               <i class="fas fa-edit plus"></i>
             <%end%>
-            <%= link_to detail, method: :delete, data: {confirm: '本当に削除しますか？' } do%>
+            <%= link_to '/plans', method: :delete, data: {confirm: '本当に削除しますか？' } do%>
               <i class="fas fa-trash-alt plus"></i>
             <%end%>
           </div>
@@ -110,60 +105,3 @@
   <% end %>
   </body>
 </html>
-=======
-<p id="notice"><%= notice %></p>
-
-<h1>Details</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Plan</th>
-      <th>Date</th>
-      <th>Spot</th>
-      <th>Image1</th>
-      <th>Image2</th>
-      <th>Image3</th>
-      <th>Image4</th>
-      <th>Image5</th>
-      <th>Image6</th>
-      <th>Image7</th>
-      <th>Image8</th>
-      <th>Image9</th>
-      <th>Image10</th>
-      <th>Text</th>
-      <th>Price</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @details.each do |detail| %>
-      <tr>
-        <td><%= detail.plan_id %></td>
-        <td><%= detail.date %></td>
-        <td><%= detail.spot %></td>
-        <td><%= image_tag detail.image1.to_s %></td>
-        <td><%= image_tag detail.image2.to_s %></td>
-        <td><%= image_tag detail.image3.to_s %></td>
-        <td><%= image_tag detail.image4.to_s %></td>
-        <td><%= image_tag detail.image5.to_s %></td>
-        <td><%= image_tag detail.image6.to_s %></td>
-        <td><%= image_tag detail.image7.to_s %></td>
-        <td><%= image_tag detail.image8.to_s %></td>
-        <td><%= image_tag detail.image9.to_s %></td>
-        <td><%= image_tag detail.image10.to_s %></td>
-        <td><%= image_tag detail.text %></td>
-        <td><%= image_tag detail.price %></td>
-        <td><%= link_to 'Show', detail %></td>
-        <td><%= link_to 'Edit', edit_detail_path(detail) %></td>
-        <td><%= link_to 'Destroy', detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
->>>>>>> 7639849bf0e38c9601ad951c4124e2b980fc33e7
-
-<%= link_to 'New Detail', new_detail_path %>

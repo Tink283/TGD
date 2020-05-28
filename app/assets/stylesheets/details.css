@@ -78,10 +78,10 @@ body {
 
 .wrap .plan_create {
   margin-top: 20vh;
-  padding-top: 2vw;
+  padding: 2vw 0;
   background-color: lightblue;
   width: 70vw;
-  height: 180vh;
+  height: auto !important;
 }
 
 .wrap .plan_create .title {
@@ -122,6 +122,26 @@ body {
   height: 4vh;
 }
 
+.wrap .plan_create .album {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5vw;
+  flex-wrap: wrap;
+}
+
+.wrap .plan_create .album img {
+  padding: 1.5vh 0vw;
+  margin: 3vh  1vw;
+  width: 15vw;
+}
+
+.wrap .plan_create .album i {
+  font-size: 3vw;
+  font-family: 'Font Awesome 5 Free';
+  background-color: lightblue;
+}
+
 .wrap .plan_create .memory {
   padding: 3vh 5vw;
   background-color: pink;
@@ -154,10 +174,11 @@ body {
   align-items: center;
 }
 
-.wrap .plan_create .end .close {
-  font-size: 5vw;
+.wrap .plan_create .end .plus {
+  font-size: 3vw;
+  font-family: 'Font Awesome 5 Free';
   background-color: lightblue;
-  margin-left: 22vw;
+  margin-left: 10vw;
 }
 
 .wrap .plan_create .end .create {
