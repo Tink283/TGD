@@ -84,6 +84,7 @@
         </header>
         <div class="wrap">
           <div class="plan_create">
+          <%= form_for(@plan) do |f|%>
             <div class="title">
               <%= form.label :title %>
               <%= form.text_field :title %>
@@ -99,10 +100,10 @@
             <div class="contents">
               <p>プラン詳細</p>
               <div class="textarea">
-                <%= form_for(@plan) do |f|%>
+                
                   <%= form.label :text %>
                   <%= f.text_area :text , cols: "100" , rows: "20"  %>
-                <%end%>
+                
               </div>
             </div>
             <div class="cost">
@@ -113,12 +114,13 @@
             </div>
             
             <div class="ends">
-              <%= form_for(@plan) do |f|%>
+              
                 <%= f.button :type => "submit"  do %>
                   <i class="fas fa-plus-circle plus"></i>
                 <%end%>
-              <%end%>
+              
             </div>
+          <% end %>
           </div>
         </div>
     <% break %>

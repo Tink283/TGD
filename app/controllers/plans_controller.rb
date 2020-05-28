@@ -71,7 +71,7 @@ class PlansController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def plan_params
-      params.require(:plan).permit(:usr_id, :title, :date, :spot, :price, :text)
+      params.require(:plan).permit(:title, :date, :spot, :price, :text)
     end
 
     def preview
