@@ -50,7 +50,6 @@
     
   </head>
   <body>
-  <% @details.each do |detail| %>
       <header class="header">
           <a href="" class="title">TGD</a>
           <nav class="navbar navbar-expand-sm navbar-light">
@@ -69,6 +68,7 @@
             </div>
           </nav>
       </header>
+    <% @details.each do |detail| %>
       <div class="wrap">
         <div class="plan_create">
           <div class="title"><h2><%= detail.plan_id %></h2></div>
