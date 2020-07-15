@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
+  root "hello#index"
+  get "hello/index" => "hello#index"
   get "plans/new" => "plans#new"
   get "plans/show" => "plans#show"
   get "plans/edit" => "plans#edit"
